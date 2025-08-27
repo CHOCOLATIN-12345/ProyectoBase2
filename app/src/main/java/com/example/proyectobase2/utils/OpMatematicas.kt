@@ -1,5 +1,7 @@
 package com.example.proyectobase2.utils
 
+import java.lang.ArithmeticException
+
 object OpMatematicas {
 
     /*Funcion sumar recibe 2 parametros y retorna un numero entero numerico*/
@@ -12,10 +14,17 @@ object OpMatematicas {
     }
 
     fun dividir(n1: Int, n2: Int): Int {
-        return n1/n2
+        try {
+            return n1*n2
+        }catch (e:ArithmeticException){
+            return 0
+        } finally {
+            println("Se ha producido un error")
+        }
     }
 
     fun multiplicar(n1: Int, n2: Int): Int{
         return n1*n2
+
     }
 }

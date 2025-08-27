@@ -38,10 +38,22 @@ class MainActivity4 : AppCompatActivity() {
         btnCalcular.setOnClickListener {
             var calN1:Int = edNumero1.text.toString().toIntOrNull()?:0
             var calN2:Int = edNumero2.text.toString().toIntOrNull()?:0
+            if(spOperaciones.selectedItem == "suma"){
+                var resultadoOP: Int = OpMatematicas.sumar(calN1,calN2)
+                txtMensaje.text = resultadoOP.toString()
+            }else if (spOperaciones.selectedItem == "resta"){
+                var resultadoOP: Int = OpMatematicas.resta(calN1,calN2)
+                txtMensaje.text = resultadoOP.toString()
+            }else if (spOperaciones.selectedItem == "dividir"){
+                var resultadoOP: Int = OpMatematicas.dividir(calN1,calN2)
+                txtMensaje.text = resultadoOP.toString()
+            }else if (spOperaciones.selectedItem == "multiplicar"){
+                var resultadoOP: Int = OpMatematicas.multiplicar(calN1,calN2)
+                txtMensaje.text = resultadoOP.toString()
+            }
 
-            var resultadoOP: Int = OpMatematicas.resta(calN1,calN2)
 
-            txtMensaje.text = resultadoOP.toString()
+
 
         }
 
