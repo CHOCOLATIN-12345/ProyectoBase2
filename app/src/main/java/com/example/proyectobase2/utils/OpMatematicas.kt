@@ -15,7 +15,7 @@ object OpMatematicas {
 
     fun dividir(n1: Int, n2: Int): Int {
         try {
-            return n1*n2
+            return n1/n2
         }catch (e:ArithmeticException){
             return 0
         } finally {
